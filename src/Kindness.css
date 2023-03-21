@@ -1,0 +1,7 @@
+ul {
+    @apply flex flex-col gap-[1.9rem]
+}
+
+li {
+    @apply text-[1.5rem] text-[#2f4a5f] font-medium
+}
