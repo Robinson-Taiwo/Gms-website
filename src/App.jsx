@@ -141,17 +141,19 @@ const App = () => {
         <div className="second-2">
 
           <div className="school-sect">
-            <h1 data-aos="zoom-out-down" data-aos-delay="50"
-              data-aos-duration="2000"
-              data-aos-easing="ease-in-out" className="the-school">
+            <h1 className="the-school">
               About Our School
             </h1>
           </div>
+          {/* data-aos="zoom-out-down" data-aos-delay="50"
+              data-aos-duration="2000"
+              data-aos-easing="ease-in-out" git status */}
+          {/* data-aos="zoom-out-down" data-aos-delay="50"
+              data-aos-duration="2000"
+              data-aos-easing="ease-in-out"  */}
 
           <div className="about-body">
-            <p data-aos="zoom-out-down" data-aos-delay="50"
-              data-aos-duration="2000"
-              data-aos-easing="ease-in-out" className="body-text">
+            <p className="body-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sint modi enim sed doloribus suscipit nihil recusandae dolore minima, nostrum molestias architecto officiis nesciunt assumenda dolorum impedit aliquam debitis ducimus!
               Tenetur aperiam at ipsa architecto obcaecati! Ex, sint nostrum. Expedita dolor inventore eius nisi, quis deserunt quo maxime dolore aspernatur perferendis iure fugiat hic nulla animi repellendus eum aliquid debitis.
               Fugit veniam dolores nisi cum porro voluptatum dolore distinctio nostrum quidem dolorem ea commodi optio, quo fugiat accusantium sed autem. Repellendus odit dolore, doloribus harum officia saepe cumque quod impedit.
