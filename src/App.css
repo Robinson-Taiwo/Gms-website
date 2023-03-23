@@ -39,6 +39,16 @@
   @apply h-[60vh] w-[100vw] bg-center bg-cover bg-no-repeat flex justify-center items-center flex-col
 }
 
+.slider-frame3 {
+  background-image: url(../src/assets/books.jpg);
+  @apply h-[60vh] w-[100vw] bg-center bg-cover bg-no-repeat flex justify-center items-center flex-col
+}
+
+.slider-frame4 {
+  background-image: url(../src/assets/chairs.jpeg);
+  @apply h-[60vh] w-[100vw] bg-center bg-cover bg-no-repeat flex justify-center items-center flex-col
+}
+
 .slider-body {
   @apply w-[100vw] h-[100%] flex justify-center items-center flex-col
 }
@@ -140,10 +150,30 @@ button.slick-arrow.slick-next {
   @apply text-[2.5rem] w-[50%] font-medium text-center
 }
 
+.slider-f21 {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-family: 'Shantell Sans', cursive;
+  @apply text-[4rem]
+}
+
+
+
+.slider-f22 {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-family: 'Shantell Sans', cursive;
+  @apply text-[4rem] text-[white] font-medium
+}
+
+.slider-f23 {
+
+  font-family: 'Kumbh Sans', sans-serif;
+  font-family: 'Shantell Sans', cursive;
+  @apply text-[4rem] text-[white] font-medium
+}
+
 .motto {
   @apply text-[white] text-[1.8rem]
 }
-
 
 .purple {
   @apply text-[purple]
@@ -186,7 +216,7 @@ button.slick-arrow.slick-next {
 }
 
 .body-text {
-  @apply w-[60%] h-[100%] text-center
+  @apply w-[60%] h-[100%] text-center text-[1.4rem] flex flex-col leading-[2rem] gap-[1rem] font-normal
 }
 
 .third {
@@ -278,6 +308,61 @@ button.slick-arrow.slick-next {
   @apply font-bold
 }
 
+.footer {
+  @apply p-[0rem] w-[100vw] bg-[#2f4a5f] flex flex-col mt-[3rem] pb-[3rem] h-[auto]
+}
+
+.footer2 {
+  @apply text-[1.3rem] text-[white]
+}
+
+.footer1 {
+  @apply p-[2rem] w-[100%] flex flex-row justify-between
+}
+
+
+
+.footer-icon {
+  @apply w-[30%] h-[90%] items-center flex justify-center
+}
+
+.footer-info {
+  @apply w-[60%] h-[90%] flex flex-row text-[white]
+}
+
+.footer-contacts {
+  @apply w-[50%] h-[100%] justify-center items-center flex gap-[1.5rem] flex-col text-[1.1rem]
+}
+
+.fch {
+  @apply text-[2rem] leading-[2rem] font-bold
+}
+
+.footer-address {
+  @apply w-[50%] h-[100%] justify-center items-center flex flex-col gap-[1rem] text-[1.1rem]
+}
+
+.icons {
+  @apply h-[22rem] w-[22rem]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 767px) {
 
   .home {
@@ -321,6 +406,27 @@ button.slick-arrow.slick-next {
 
   .slider-body2 {
     @apply flex justify-center items-center w-[100%] h-[100%]
+  }
+
+  .slider-f21 {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Shantell Sans', cursive;
+    @apply text-[2rem]
+  }
+
+
+
+  .slider-f22 {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Shantell Sans', cursive;
+    @apply text-[2rem] text-[white] font-medium
+  }
+
+  .slider-f23 {
+
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Shantell Sans', cursive;
+    @apply text-[2rem] text-[white] font-medium
   }
 
 
@@ -475,7 +581,7 @@ button.slick-arrow.slick-next {
   }
 
   .fourth {
-    @apply h-[50vh] flex flex-col w-[100vw]
+    @apply h-[50vh] flex flex-col w-[100vw] 
   }
 
   .fourth-heading {
@@ -541,7 +647,7 @@ button.slick-arrow.slick-next {
   }
 
   .value-content {
-    @apply p-[2rem] w-[100%] flex justify-center items-center 
+    @apply p-[2rem] w-[100%] flex justify-center items-center
   }
 
   .link.active {
@@ -554,6 +660,111 @@ button.slick-arrow.slick-next {
     @apply h-[1.5rem]
   }
 
+
+  .footer {
+    @apply items-center w-[100vw] bg-[#2f4a5f] justify-center flex flex-col mt-[30rem] h-[auto]
+  }
+
+  .footer2 {
+    @apply text-[1.3rem] text-[white]
+  }
+
+  .footer1 {
+    @apply p-[2rem] w-[100%] flex flex-col justify-between
+  }
+
+
+
+  .footer-icon {
+    @apply w-[100%] h-[90%] items-center flex justify-center
+  }
+
+  .footer-info {
+    @apply w-[100%] h-[90%] flex flex-col text-[white] 
+  }
+
+  .footer-contacts {
+    @apply w-[100%] h-[100%] justify-center items-center flex gap-[1.5rem] flex-col text-[1.1rem]
+  }
+
+  .fch {
+    @apply text-[2rem] leading-[2rem] font-bold
+  }
+
+  .footer-address {
+    @apply w-[100%] h-[100%] justify-center items-center flex flex-col gap-[1rem] text-[1.1rem] mt-[2rem]
+  }
+
+  .icons {
+    @apply h-[10rem] w-[10rem] 
+  }
+
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+
+  .overlap {
+    @apply relative bg-transparent h-[7rem] w-[100vw] mt-[-2.2rem] flex justify-center
+  }
+
+  .overlap-f {
+    box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);
+
+    @apply h-[100%] w-[90%] bg-[#2f4a5f] rounded-md flex flex-col
+  }
+
+  .overlap-body {
+    @apply flex flex-row h-[80%] justify-between items-center px-[1rem]
+  }
+
+  .overlap-head {
+    @apply text-[1.7rem] text-[white] font-medium
+  }
+
+  .v-line {
+    border: 0.1rem solid white;
+    @apply h-[90%] w-[0rem]
+  }
+
+  .over-text {
+    @apply text-[1.2rem] font-bold text-[white]
+  }
+
+  .second {
+    @apply h-[20vh] w-[100vw] bg-[#f9faf9] mb-[4rem]
+  }
+
+  .fourth {
+    @apply h-[auto] flex flex-col w-[100vw]  pb-[3rem] pt-[3rem]
+  }
+
+  .fourth-heading {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Shantell Sans', cursive;
+    @apply text-[4rem] mb-[2rem] font-bold text-[#2f4a5f]
+  }
+
+  .fourth-header {
+    @apply w-[100vw] flex justify-center items-center
+  }
+
+  .links {
+    border-bottom: 0.2rem solid black;
+    @apply flex flex-row gap-[2rem] ml-[2rem] w-[50%]
+  }
+
+  .fourth-body {
+    @apply w-[100vw] pt-[3rem]
+  }
+
+  .value-content {
+    box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);
+
+    @apply bg-[#e4dcdc] h-[90%] w-[100%] ml-[0rem]
+  }
 
 
 }

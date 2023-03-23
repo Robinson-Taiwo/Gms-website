@@ -103,6 +103,36 @@ const App = () => {
 
           </div>
 
+          <div className="slider-frame3">
+
+            <div className="slider-body2">
+
+              <h1 className="slider-f22">
+                Dealing with excellence is our Strong Suit
+              </h1>
+            </div>
+
+
+            <div className="about-b">
+
+            </div>
+
+          </div>
+
+          <div className="slider-frame4">
+
+            <div className="slider-body2">
+
+              <h1 className="slider-f23">
+                Conducive learning environments for your wards
+              </h1>
+            </div>
+
+
+
+
+          </div>
+
         </Slider>
       </div>
 
@@ -153,13 +183,23 @@ const App = () => {
               data-aos-easing="ease-in-out"  */}
 
           <div className="about-body">
-            <p className="body-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sint modi enim sed doloribus suscipit nihil recusandae dolore minima, nostrum molestias architecto officiis nesciunt assumenda dolorum impedit aliquam debitis ducimus!
-              Tenetur aperiam at ipsa architecto obcaecati! Ex, sint nostrum. Expedita dolor inventore eius nisi, quis deserunt quo maxime dolore aspernatur perferendis iure fugiat hic nulla animi repellendus eum aliquid debitis.
-              Fugit veniam dolores nisi cum porro voluptatum dolore distinctio nostrum quidem dolorem ea commodi optio, quo fugiat accusantium sed autem. Repellendus odit dolore, doloribus harum officia saepe cumque quod impedit.
-              Porrogite ducimus culpa eius rem facere ratione consectetur velit architecto sit, quibusdam illo, nemo dolore quia cumque autem distinctio, quasi adipisci. Quis laudantium quisquam ullam soluta sunt.
-              Illo quidem quod aliquid consequatur! Quaerat facere placeat ullam blanditiis culpa assumenda eligendi itaque mollitia modi nihil error magni dolorum fugiat quis, velit veritatis asperiores deleniti! Ducimus quod unde pariatur!
-            </p>
+            <div className="body-text">
+              <div className="body-p">
+                Great Marble Group of School is a leading institution of learning that values pride, strength, and kindness. The school prides itself on providing top-quality education to both primary and secondary school students. The institution's mission is to inspire and empower students to achieve their full potential through the provision of an environment that nurtures academic excellence, character development, and lifelong learning.
+              </div>
+              <div className="body-p">
+                Located at 1, Olabanwo Street, off Ofin Road, Igbagbo in Baiyeku LCDA, the Great Marble Group of School is building a reputation for excellence in academics and character development. The school's dedicated and experienced faculty members work tirelessly to provide students with an education that is both rigorous and supportive. Great Marble Group of School is committed to creating a learning environment that is inclusive and values-driven, where students are encouraged to learn and grow.
+
+
+              </div>
+              <div className="body-p">
+                Whether you are a primary school student or a secondary school student, Great Marble Group of School has everything you need to succeed. With a strong focus on academic excellence, character development, and community involvement, this institution is the perfect place to begin your journey towards a bright and successful future. So come and join us at Great Marble Group of School, where education and values go hand in hand!
+
+
+
+
+              </div>
+            </div>
           </div>
 
 
@@ -169,7 +209,9 @@ const App = () => {
         <Parallax bgImage={school} strength={600}>
 
           <div className="third">
-            <h1 className="mission">
+            <h1 data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000" className="mission">
               OUR MISSION
             </h1>
             <div className="mission-text">
@@ -249,7 +291,9 @@ const App = () => {
 
         <div className="fourth">
           <div className="fourth-header">
-            <h1 className="fourth-heading">Our Values</h1>
+            <h1 data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000" className="fourth-heading">Our Values</h1>
           </div>
 
           <div className="fourth-body">
@@ -264,6 +308,47 @@ const App = () => {
 
           </div>
 
+        </div>
+
+        <div className="footer">
+
+          <div className="footer1">
+
+
+            <div className="footer-icon">
+              <img data-aos="fade-up" data-aos-delay="50"
+                data-aos-duration="2000"
+                data-aos-easing="ease-in-out" src={logo1} alt="" className="icons" />
+            </div>
+
+            <div className="footer-info">
+              <div className="footer-contacts">
+
+                <h1 className="fch">
+                  Contacts
+                </h1>
+
+                <p className="conts">greatmarblesch410@gmail.com</p>
+                <p className="conts">00447883830723</p>
+                <p className="conts">08100244181</p>
+                <p className="conts">+2340743020701</p>
+              </div>
+
+              <div className="footer-address">
+                <h1 className="fch">
+                  Address
+                </h1>
+                <p className="conts">
+                  1, Olabanwo street, off ofin road, igbagbo. baiyeku lcda
+                </p>
+              </div>
+            </div>
+            {/* footer end */}
+          </div>
+
+          <div className="footer2">
+            © copyright 2023
+          </div>
         </div>
 
       </div>
