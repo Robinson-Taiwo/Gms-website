@@ -70,7 +70,7 @@ button.slick-arrow.slick-next {
 }
 
 .logo {
-  @apply h-[100%] w-[6rem] ml-[3rem] rounded-[0.2rem]
+  @apply h-[100%] w-[6rem] rounded-[0.2rem]
 }
 
 
@@ -99,7 +99,7 @@ button.slick-arrow.slick-next {
   position: sticky;
   z-index: 999;
   top: 0em;
-
+  @apply px-[3rem]
 }
 
 .navbar-active {
@@ -113,6 +113,11 @@ button.slick-arrow.slick-next {
   position: sticky;
   z-index: 999;
   top: 0em;
+  @apply px-[3rem]
+}
+
+.login {
+  @apply bg-[white] text-[1.5rem] h-[80%] w-[10rem] flex justify-center items-center rounded-[1rem]
 }
 
 .overlap {
@@ -208,11 +213,11 @@ button.slick-arrow.slick-next {
 } */
 
 .school-sect {
-  @apply flex justify-center flex-col pt-[3rem]
+  @apply flex justify-center flex-col pt-[1rem]
 }
 
 .about-body {
-  @apply flex justify-center items-center mt-[1rem] mb-[4rem]
+  @apply flex justify-center items-center mt-[1rem] mb-[0rem]
 }
 
 .body-text {
@@ -258,7 +263,7 @@ button.slick-arrow.slick-next {
 .value-content {
   box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);
 
-  @apply bg-[#e4dcdc] h-[90%] w-[80%] ml-[4rem]
+  @apply bg-[#e4dcdc] h-[80%] w-[80%] ml-[4rem]
 }
 
 .mi-text2 {
@@ -309,7 +314,7 @@ button.slick-arrow.slick-next {
 }
 
 .footer {
-  @apply p-[0rem] w-[100vw] bg-[#2f4a5f] flex flex-col mt-[3rem] pb-[3rem] h-[auto]
+  @apply p-[0rem] w-[100vw] bg-[#2f4a5f] flex flex-col mt-[3rem] pb-[3rem] h-[auto] items-center
 }
 
 .footer2 {
@@ -331,7 +336,7 @@ button.slick-arrow.slick-next {
 }
 
 .footer-contacts {
-  @apply w-[50%] h-[100%] justify-center items-center flex gap-[1.5rem] flex-col text-[1.1rem]
+  @apply w-[50%] h-[100%] justify-center items-center flex gap-[1.5rem] flex-col text-[1.5rem]
 }
 
 .fch {
@@ -339,11 +344,36 @@ button.slick-arrow.slick-next {
 }
 
 .footer-address {
-  @apply w-[50%] h-[100%] justify-center items-center flex flex-col gap-[1rem] text-[1.1rem]
+  @apply w-[50%] h-[100%] justify-center items-center flex flex-col gap-[1rem] text-[1.5rem] pt-[3rem] capitalize
 }
 
 .icons {
   @apply h-[22rem] w-[22rem]
+}
+
+.newsletter {
+  @apply flex flex-col mb-[2rem] gap-[1rem] ml-[2rem]
+}
+
+.news-input {
+  @apply pl-[1rem] h-[4rem] rounded-[0.2rem] w-[100%] text-[black] text-[1.5rem]
+}
+
+
+.news-input:focus {
+  @apply outline-none
+}
+
+.news-input::placeholder {
+  @apply text-[1.5rem] text-[#8d8989]
+}
+
+.submit {
+  @apply bg-[white] p-[0.5rem] w-[11rem] flex self-center justify-center items-center rounded-[1rem] h-[4.5rem] text-[1.5rem]
+}
+
+.news-head {
+  @apply text-[2rem] font-medium
 }
 
 
@@ -437,7 +467,7 @@ button.slick-arrow.slick-next {
   }
 
   .logo {
-    @apply h-[100%] w-[5rem] ml-[3rem] rounded-[0.2rem]
+    @apply h-[100%] w-[5rem] ml-[0rem] rounded-[0.2rem] hidden
   }
 
 
@@ -462,11 +492,11 @@ button.slick-arrow.slick-next {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     position: sticky;
     z-index: 999;
     top: 0em;
-
+    @apply px-[0.5rem]
   }
 
   .navbar-active {
@@ -480,7 +510,12 @@ button.slick-arrow.slick-next {
     position: sticky;
     z-index: 999;
     top: 0em;
+    @apply px-[0.5rem]
+  }
 
+
+  .login {
+    @apply bg-[white] text-[0.8rem] h-[50%] w-[5rem] flex justify-center items-center rounded-[1rem]
   }
 
   .overlap {
@@ -544,11 +579,11 @@ button.slick-arrow.slick-next {
   }
 
   .about {
-    @apply mt-[2rem] h-[3.5rem] w-[6.5rem] bg-black rounded-[4rem] justify-center flex items-center font-medium
+    @apply mt-[1rem] h-[3.5rem] w-[6.5rem] bg-black rounded-[4rem] justify-center flex items-center font-medium
   }
 
   .the-school {
-    @apply mt-[2rem] text-[2.5rem] font-bold text-[#2f4a5f]
+    @apply mt-[2rem] text-[2.2rem] font-bold text-[#2f4a5f]
   }
 
   /* .sin {
@@ -564,7 +599,11 @@ button.slick-arrow.slick-next {
   }
 
   .body-text {
-    @apply w-[60%] h-[100%] text-center
+    @apply w-[90%] h-[100%] text-center
+  }
+
+  .body-p {
+    @apply text-[1rem]
   }
 
   .third {
@@ -573,7 +612,7 @@ button.slick-arrow.slick-next {
   }
 
   .second-2 {
-    @apply pb-[4rem]
+    @apply pb-[0rem]
   }
 
   .mission {
@@ -581,7 +620,7 @@ button.slick-arrow.slick-next {
   }
 
   .fourth {
-    @apply h-[50vh] flex flex-col w-[100vw] 
+    @apply h-[50vh] flex flex-col w-[100vw]
   }
 
   .fourth-heading {
@@ -680,7 +719,7 @@ button.slick-arrow.slick-next {
   }
 
   .footer-info {
-    @apply w-[100%] h-[90%] flex flex-col text-[white] 
+    @apply w-[100%] h-[90%] flex flex-col text-[white]
   }
 
   .footer-contacts {
@@ -696,9 +735,24 @@ button.slick-arrow.slick-next {
   }
 
   .icons {
-    @apply h-[10rem] w-[10rem] 
+    @apply h-[10rem] w-[10rem]
   }
 
+  .newsletter {
+    @apply flex flex-col mb-[2rem] gap-[1rem]
+  }
+
+  .news-input {
+    @apply pl-[1rem] h-[2.5rem] rounded-[0.2rem]
+  }
+
+  .submit {
+    @apply bg-[white] p-[0.5rem] w-[8rem] flex self-center justify-center items-center rounded-[1rem]
+  }
+
+  .news-head {
+    @apply text-[1.2rem] font-medium
+  }
 
 
 }
@@ -738,7 +792,7 @@ button.slick-arrow.slick-next {
   }
 
   .fourth {
-    @apply h-[auto] flex flex-col w-[100vw]  pb-[3rem] pt-[3rem]
+    @apply h-[auto] flex flex-col w-[100vw] pb-[3rem] pt-[3rem]
   }
 
   .fourth-heading {
@@ -766,5 +820,60 @@ button.slick-arrow.slick-next {
     @apply bg-[#e4dcdc] h-[90%] w-[100%] ml-[0rem]
   }
 
+
+
+  .footer {
+    @apply items-center w-[100vw] bg-[#2f4a5f] justify-center flex flex-col mt-[2rem] h-[auto]
+  }
+
+  .footer2 {
+    @apply text-[1.3rem] text-[white]
+  }
+
+  .footer1 {
+    @apply p-[2rem] w-[100%] flex flex-col justify-between
+  }
+
+
+
+  .footer-icon {
+    @apply w-[100%] h-[90%] items-center flex justify-center
+  }
+
+  .footer-info {
+    @apply w-[100%] h-[90%] flex flex-col text-[white]
+  }
+
+  .footer-contacts {
+    @apply w-[100%] h-[100%] justify-center items-center flex gap-[1.5rem] flex-col text-[1.1rem]
+  }
+
+  .fch {
+    @apply text-[2rem] leading-[2rem] font-bold
+  }
+
+  .footer-address {
+    @apply w-[100%] h-[100%] justify-center items-center flex flex-col gap-[1rem] text-[1.1rem] mt-[2rem]
+  }
+
+  .icons {
+    @apply h-[10rem] w-[10rem]
+  }
+
+  .newsletter {
+    @apply flex flex-col mb-[2rem] gap-[1rem]
+  }
+
+  .news-input {
+    @apply pl-[1rem] h-[4.5rem] rounded-[0.2rem]
+  }
+
+  .submit {
+    @apply bg-[white] p-[0.5rem] w-[11rem] flex self-center justify-center items-center rounded-[1rem]
+  }
+
+  .news-head {
+    @apply text-[1.8rem] font-medium
+  }
 
 }
