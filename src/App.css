@@ -739,15 +739,24 @@ button.slick-arrow.slick-next {
   }
 
   .newsletter {
-    @apply flex flex-col mb-[2rem] gap-[1rem]
+    @apply flex flex-col mb-[2rem] gap-[1rem] ml-[0rem]
   }
 
   .news-input {
-    @apply pl-[1rem] h-[2.5rem] rounded-[0.2rem]
+    @apply pl-[1rem] h-[2rem] rounded-[0.2rem] text-[1rem]
   }
 
+  .news-input:focus {
+    @apply outline-none
+  }
+
+  .news-input::placeholder {
+    @apply text-[1rem] text-[#8d8989]
+  }
+
+
   .submit {
-    @apply bg-[white] p-[0.5rem] w-[8rem] flex self-center justify-center items-center rounded-[1rem]
+    @apply bg-[white] p-[0.5rem] h-[2.5rem] w-[8rem] flex self-center justify-center items-center rounded-[1rem] text-[1rem]
   }
 
   .news-head {
