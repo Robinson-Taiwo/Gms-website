@@ -117,7 +117,11 @@ button.slick-arrow.slick-next {
 }
 
 .login {
-  @apply bg-[white] text-[1.5rem] h-[80%] w-[10rem] flex justify-center items-center rounded-[1rem]
+  @apply bg-[white] text-[1.5rem] p-[0.5rem] h-[3rem] font-normal w-[8rem] flex justify-center items-center rounded-[1rem]
+}
+
+.login:hover {
+  @apply bg-[black] text-[white]
 }
 
 .overlap {
@@ -152,7 +156,7 @@ button.slick-arrow.slick-next {
 }
 
 .slider-f2 {
-  @apply text-[2.5rem] w-[50%] font-medium text-center
+  @apply text-[2rem] w-[50%] font-medium text-center
 }
 
 .slider-f21 {
@@ -166,14 +170,14 @@ button.slick-arrow.slick-next {
 .slider-f22 {
   font-family: 'Kumbh Sans', sans-serif;
   font-family: 'Shantell Sans', cursive;
-  @apply text-[4rem] text-[white] font-medium
+  @apply text-[2.5rem] text-[white] font-medium
 }
 
 .slider-f23 {
 
   font-family: 'Kumbh Sans', sans-serif;
   font-family: 'Shantell Sans', cursive;
-  @apply text-[4rem] text-[white] font-medium
+  @apply text-[2.5rem] text-[white] font-medium
 }
 
 .motto {
@@ -221,7 +225,7 @@ button.slick-arrow.slick-next {
 }
 
 .body-text {
-  @apply w-[60%] h-[100%] text-center text-[1.4rem] flex flex-col leading-[2rem] gap-[1rem] font-normal
+  @apply w-[90%] h-[100%] text-center text-[1.2rem] flex flex-col leading-[2rem] gap-[1rem] font-medium
 }
 
 .third {
@@ -234,7 +238,7 @@ button.slick-arrow.slick-next {
 }
 
 .mission {
-  @apply mt-[0rem] text-[3rem] font-bold text-[white]
+  @apply mt-[0rem] text-[2.5rem] font-bold text-[white]
 }
 
 .fourth {
@@ -263,32 +267,32 @@ button.slick-arrow.slick-next {
 .value-content {
   box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);
 
-  @apply bg-[#e4dcdc] h-[80%] w-[80%] ml-[4rem]
+  @apply bg-[#e4dcdc] h-[99%] w-[80%] ml-[4rem]
 }
 
 .mi-text2 {
-  @apply text-[1.7rem] font-medium text-[#b3ff00]
+  @apply text-[1.4rem] font-medium text-[#b3ff00]
 }
 
 .mi-text3 {
-  @apply text-[1.7rem] font-medium text-[#fa2d09]
+  @apply text-[1.4rem] font-medium text-[#fa2d09]
 }
 
 .mi-text4 {
-  @apply text-[1.7rem] font-medium text-[#ffc400]
+  @apply text-[1.4rem] font-medium text-[#ffc400]
 }
 
 .mi-text5 {
-  @apply text-[1.7rem] font-medium text-[#00ffff]
+  @apply text-[1.4rem] font-medium text-[#00ffff]
 }
 
 
 .mi-text6 {
-  @apply text-[1.7rem] font-medium text-[white]
+  @apply text-[1.5rem] font-medium text-[white]
 }
 
 .mi-text1 {
-  @apply text-[1.8rem] font-medium text-[#e7eb0d] mb-[1rem]
+  @apply text-[1.6rem] font-medium text-[#e7eb0d] mb-[1rem]
 }
 
 .mi-coverl {
@@ -340,7 +344,7 @@ button.slick-arrow.slick-next {
 }
 
 .fch {
-  @apply text-[2rem] leading-[2rem] font-bold
+  @apply text-[1.5rem] leading-[2rem] font-bold
 }
 
 .footer-address {
@@ -356,32 +360,106 @@ button.slick-arrow.slick-next {
 }
 
 .news-input {
-  @apply pl-[1rem] h-[4rem] rounded-[0.2rem] w-[100%] text-[black] text-[1.5rem]
+  @apply pl-[1rem] h-[2.5rem] rounded-[0.2rem] w-[100%] text-[black] text-[1.2rem]
 }
 
+
+.conts {
+  @apply text-[1rem]
+}
 
 .news-input:focus {
   @apply outline-none
 }
 
 .news-input::placeholder {
-  @apply text-[1.5rem] text-[#8d8989]
+  @apply text-[1.2rem] text-[#8d8989]
 }
 
 .submit {
-  @apply bg-[white] p-[0.5rem] w-[11rem] flex self-center justify-center items-center rounded-[1rem] h-[4.5rem] text-[1.5rem]
+  @apply bg-[white] p-[0.5rem] w-[8rem] flex self-center justify-center items-center rounded-[1rem] h-[2.7rem] text-[1.5rem]
+}
+
+.submit:hover {
+  @apply bg-[#2f4a5f] text-[white]
 }
 
 .news-head {
-  @apply text-[2rem] font-medium
+  @apply text-[1.4rem] font-medium
 }
 
 
+/* .overlay {
+  @apply h-[30vh] w-[30vw] bg-[#a84848] top-0 fixed flex  items-center justify-center self-center
+} */
 
 
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90%;
+  overflow-y: auto;
+  text-align: center;
+}
 
+h2 {
+  color: #007bff;
+  margin-top: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+}
+
+li a:hover {
+  background-color: #0062cc;
+}
+
+button {
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+li:hover {
+  background-color: #2f4a5f;
+}
 
 
 
@@ -486,7 +564,7 @@ button.slick-arrow.slick-next {
 
 
   .navbar {
-    height: 5rem;
+    height: 3rem;
     width: 100vw;
     background-color: #2f4a5f;
     display: flex;
@@ -515,7 +593,7 @@ button.slick-arrow.slick-next {
 
 
   .login {
-    @apply bg-[white] text-[0.8rem] h-[50%] w-[5rem] flex justify-center items-center rounded-[1rem]
+    @apply bg-[white] text-[0.8rem] h-[1.9rem] w-[5rem] flex justify-center items-center rounded-[1rem]
   }
 
   .overlap {
@@ -626,11 +704,11 @@ button.slick-arrow.slick-next {
   .fourth-heading {
     font-family: 'Kumbh Sans', sans-serif;
     font-family: 'Shantell Sans', cursive;
-    @apply text-[4rem] mb-[2rem] font-bold text-[#2f4a5f]
+    @apply text-[3rem] mb-[0rem] font-bold mt-[1rem] text-[#2f4a5f]
   }
 
   .fourth-header {
-    @apply w-[100vw] flex justify-center items-center
+    @apply w-[100vw] flex justify-center items-center h-[15rem]
   }
 
   .links {
@@ -685,9 +763,9 @@ button.slick-arrow.slick-next {
     @apply gap-[2rem] flex flex-col
   }
 
-  .value-content {
+  /* .value-content {
     @apply p-[2rem] w-[100%] flex justify-center items-center
-  }
+  } */
 
   .link.active {
     color: red;
@@ -701,7 +779,7 @@ button.slick-arrow.slick-next {
 
 
   .footer {
-    @apply items-center w-[100vw] bg-[#2f4a5f] justify-center flex flex-col mt-[30rem] h-[auto]
+    @apply items-center w-[100vw] bg-[#2f4a5f] justify-center flex flex-col mt-[15rem] h-[auto]
   }
 
   .footer2 {

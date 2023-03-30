@@ -1,9 +1,9 @@
-ul {
-    @apply flex flex-col gap-[1.9rem]
+ol {
+    @apply flex flex-col gap-[1.5rem]
 }
 
 li {
-    @apply text-[1.5rem] text-[#2f4a5f] font-medium
+    @apply text-[1.2rem] text-[#2f4a5f] font-medium
 }
 
 @media (max-width: 767px) {

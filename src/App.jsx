@@ -40,6 +40,19 @@ AOS.init({
 
 const App = () => {
 
+  // const [showOverlay, setShowOverlay] = useState(false)
+
+
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  }
+
+  const closeModal = () => {
+    setShowModal(false);
+  }
+
   const [heading, setHeading] = useState("strength")
 
   const settings = {
@@ -81,9 +94,24 @@ const App = () => {
       <nav className="navbar">
         <img src={logo1} alt="" className="logo" />
         <div className="login">
-          <a href="" className="href">Login</a>
+          <button onClick={openModal} className="href">Login</button>
         </div>
       </nav>
+
+
+      {showModal && (
+        <div className="overlay">
+          <div className="modal">
+            <h2>Login options</h2>
+            <ul>
+              <li><a href="staff-login.html">Staff login</a></li>
+              <li><a href="student-login.html">Student login</a></li>
+              <li><a href="parent-login.html">Parent login</a></li>
+            </ul>
+            <button onClick={closeModal}>Close</button>
+          </div>
+        </div>
+      )}
 
       <div className="slider">
 
@@ -160,7 +188,11 @@ const App = () => {
         </Slider>
       </div>
 
-
+      {/* {showOverlay && (
+        <div className="overlay">
+login buttons
+        </div>
+      )} */}
 
       <div className="second">
         <div className="overlap">
@@ -195,13 +227,7 @@ const App = () => {
         <div className="second-2">
 
           <div className="school-sect">
-            <h1 data-aos="fade-down" data-aos-offset="200"
-              // data-aos-delay="50"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-              // data-aos-once="true"
-              data-aos-anchor-placement="top-center"
+            <h1
               className="the-school">
               ABOUT OUR SCHOOL
             </h1>
@@ -216,40 +242,19 @@ const App = () => {
           <div className="about-body">
             <div className="body-text">
               <div
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                // data-aos-once="false"
-                data-aos-anchor-placement="top-center"
+
                 className="body-p">
                 Great Marble Group of School is a leading institution of learning that values pride, strength, and kindness. The school prides itself on providing top-quality education to both primary and secondary school students. The institution's mission is to inspire and empower students to achieve their full potential through the provision of an environment that nurtures academic excellence, character development, and lifelong learning.
               </div>
               <div
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="2000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                // data-aos-once="false"
-                data-aos-anchor-placement="top-center"
+
                 className="body-p">
                 Located at 1, Olabanwo Street, off Ofin Road, Igbagbo in Baiyeku LCDA, the Great Marble Group of School is building a reputation for excellence in academics and character development. The school's dedicated and experienced faculty members work tirelessly to provide students with an education that is both rigorous and supportive. Great Marble Group of School is committed to creating a learning environment that is inclusive and values-driven, where students are encouraged to learn and grow.
 
 
               </div>
               <div
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="3000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                // data-aos-once="false"
-                data-aos-anchor-placement="top-center"
+
                 className="body-p">
                 Whether you are a primary school student or a secondary school student, Great Marble Group of School has everything you need to succeed. With a strong focus on academic excellence, character development, and community involvement, this institution is the perfect place to begin your journey towards a bright and successful future. So come and join us at Great Marble Group of School, where education and values go hand in hand!
 
@@ -267,40 +272,19 @@ const App = () => {
         <Parallax bgImage={school} strength={600}>
 
           <div className="third">
-            <h1 data-aos="flip-left"
-              data-aos-easing="ease-out-cubic"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="2000"
-              data-aos-mirror="true"
-              // data-aos-once="false"
-              data-aos-anchor-placement="top-center" className="mission">
+            <h1 className="mission">
               OUR MISSION
             </h1>
             <div className="mission-text">
               <p
-                data-aos="zoom-out"
-                data-aos-offset="200"
-                data-aos-delay="30"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                // data-aos-once="false"
-                data-aos-anchor-placement="top-center"
+
                 className="mi-text1"> With the support of the parents and our school community, we ensure</p>
 
               <div className="mi-cover">
                 <img src={pin} alt="" className="pin" />
 
                 <p
-                  data-aos="zoom-in"
-                  data-aos-offset="200"
-                  data-aos-delay="50"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  // data-aos-once="false"
-                  data-aos-anchor-placement="top-center" className="mi-text2">
+                  className="mi-text2">
                   We: Develop self-motivated learners who demonstrate resilience and pride in everything they do.
                 </p>
 
@@ -309,14 +293,7 @@ const App = () => {
               <div className="mi-cover">
                 <img src={pin} alt="" className="pin" />
 
-                <p data-aos="zoom-in"
-                  data-aos-offset="200"
-                  data-aos-delay="70"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  // data-aos-once="false"
-                  data-aos-anchor-placement="top-center" className="mi-text3">
+                <p className="mi-text3">
 
                   We: Foster critical thinkers through rich,tailored, and exciting learning opportunities.
                 </p>
@@ -326,14 +303,7 @@ const App = () => {
               <div className="mi-cover">
                 <img src={pin} alt="" className="pin" />
 
-                <p data-aos="zoom-in"
-                  data-aos-offset="200"
-                  data-aos-delay="90"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  // data-aos-once="false"
-                  data-aos-anchor-placement="top-center" className="mi-text4">
+                <p className="mi-text4">
 
                   We: Nurture our global citizens to be socially responsible.
                 </p>
@@ -342,14 +312,7 @@ const App = () => {
               <div className="mi-cover">
                 <img src={pin} alt="" className="pin" />
 
-                <p data-aos="zoom-in"
-                  data-aos-offset="200"
-                  data-aos-delay="110"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  // data-aos-once="false"
-                  data-aos-anchor-placement="top-center" className="mi-text5">
+                <p className="mi-text5">
 
                   We: Promote the importance of mutual respect,positive well-being, and kindness.
                 </p>
@@ -359,14 +322,7 @@ const App = () => {
               <div className="mi-coverl">
 
                 <p
-                  data-aos="zoom-out"
-                  data-aos-offset="200"
-                  data-aos-delay="130"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  // data-aos-once="false"
-                  data-aos-anchor-placement="top-center"
+
                   className="mi-text6">
                   At Great Marble, our rigorous and forward-thinking  approach to teaching ensures learners have the tools needed to continue on their education path
 

@@ -3,7 +3,7 @@ import "./Kindness.css"
 
 const Kindness = () => {
     return (
-        <ul>
+        <ol>
 
             <li className="val-text">
                 We are kind to each other,children and adults
@@ -26,7 +26,7 @@ const Kindness = () => {
                 We are kind to ourselves
 
             </li>
-        </ul>
+        </ol>
     )
 }
 

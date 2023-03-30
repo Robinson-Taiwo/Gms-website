@@ -1,0 +1,13 @@
+ol {
+    @apply flex flex-col gap-[1.5rem]
+}
+
+li {
+    @apply text-[1.2rem] text-[#2f4a5f] font-medium
+}
+
+@media (max-width: 767px) {
+    li {
+        @apply text-[1rem] text-[#2f4a5f] font-medium
+    }
+}

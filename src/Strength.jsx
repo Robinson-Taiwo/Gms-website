@@ -2,7 +2,7 @@ import React from 'react'
 
 const Strength = () => {
     return (
-        <ul>
+        <ol>
 
 
 
@@ -29,7 +29,7 @@ const Strength = () => {
 
             </li>
 
-        </ul>
+        </ol>
     )
 }
 

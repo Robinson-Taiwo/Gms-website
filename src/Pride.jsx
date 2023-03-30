@@ -1,8 +1,9 @@
 import React from 'react'
+import "./Pride.css"
 
 const Pride = () => {
     return (
-        <ul>
+        <ol>
 
 
 
@@ -33,7 +34,7 @@ const Pride = () => {
 
 
 
-        </ul>
+        </ol>
     )
 }
 
