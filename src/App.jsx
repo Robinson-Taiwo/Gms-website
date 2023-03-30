@@ -104,9 +104,9 @@ const App = () => {
           <div className="modal">
             <h2>Login options</h2>
             <ul>
-              <li><a href="staff-login.html">Staff login</a></li>
-              <li><a href="student-login.html">Student login</a></li>
-              <li><a href="parent-login.html">Parent login</a></li>
+              <li className="li" ><a href="staff-login.html">Staff login</a></li>
+              <li className="li" ><a href="student-login.html">Student login</a></li>
+              <li className="li"><a href="parent-login.html">Parent login</a></li>
             </ul>
             <button onClick={closeModal}>Close</button>
           </div>

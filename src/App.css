@@ -401,7 +401,7 @@ button.slick-arrow.slick-next {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -411,7 +411,7 @@ button.slick-arrow.slick-next {
 .modal {
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
   max-width: 500px;
   width: 100%;
@@ -457,7 +457,7 @@ button {
   margin-top: 20px;
 }
 
-li:hover {
+.li:hover {
   background-color: #2f4a5f;
 }
 
