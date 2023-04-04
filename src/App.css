@@ -881,7 +881,7 @@ a {
 
 
   .footer {
-    @apply items-center w-[100vw] bg-[#2f4a5f] justify-center flex flex-col mt-[29rem] h-[auto]
+    @apply items-center w-[100vw] bg-[#2f4a5f] justify-center flex flex-col mt-[13rem] h-[auto]
   }
 
   .footer2 {
