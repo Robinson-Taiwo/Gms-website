@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import logo1 from "../src/assets/logo1.svg"
+import close from "../src/assets/close.svg"
+
 import pin from "../src/assets/pin.png"
 import Kindness from "./Kindness";
 import Pride from "./Pride";
@@ -24,7 +26,6 @@ AOS.init({
   disableMutationObserver: false, // disables automatic mutations' detections (advanced)
   debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
   throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
 
   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
   offset: 120, // offset (in px) from the original trigger point
@@ -102,13 +103,13 @@ const App = () => {
       {showModal && (
         <div className="overlay">
           <div className="modal">
-            <h2>Login options</h2>
-            <ul>
-              <li className="li" ><a href="staff-login.html">Staff login</a></li>
-              <li className="li" ><a href="student-login.html">Student login</a></li>
-              <li className="li"><a href="parent-login.html">Parent login</a></li>
+            <h2 className="login-opt" >Login as:</h2>
+            <ul className="orderedList">
+              <li className="li" ><a href="staff-login.html"> A Staff </a></li>
+              <li className="li" ><a href="student-login.html"> A Student </a></li>
+              <li className="li"><a href="parent-login.html"> A Parent</a></li>
             </ul>
-            <button onClick={closeModal}>Close</button>
+            <button className="close-btn" onClick={closeModal}><img className="close-icon" src={close} alt="" /></button>
           </div>
         </div>
       )}
