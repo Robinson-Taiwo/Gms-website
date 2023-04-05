@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Parallax } from 'react-parallax'
-
+import { easeInOut, motion } from 'framer-motion';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -65,6 +65,38 @@ const App = () => {
     autoplay: true
   };
 
+  const typingContainer = {
+    hidden: {
+      opacity: 0,
+      y: "-10px",
+    },
+
+    show: {
+      opacity: 1,
+      y: "0",
+      transition: {
+        staggerChildren: 0.4,
+        ease: easeInOut
+      }
+    }
+  }
+
+
+  const typingText = {
+    hidden: {
+      opacity: 0,
+      y: "-20px"
+    },
+
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: easeInOut
+      }
+    }
+  }
+
   // changing nav colour when scrolling
   const [colour, setColour] = useState(false)
 
@@ -105,9 +137,9 @@ const App = () => {
           <div className="modal">
             <h2 className="login-opt" >Login as:</h2>
             <ul className="orderedList">
-              <li className="li" ><a href="staff-login.html"> A Staff </a></li>
-              <li className="li" ><a href="student-login.html"> A Student </a></li>
-              <li className="li"><a href="parent-login.html"> A Parent</a></li>
+              <li className="li" ><a href="staff-login.html">  Staff </a></li>
+              <li className="li" ><a href="student-login.html">  Student </a></li>
+              <li className="li"><a href="parent-login.html">  Parent</a></li>
             </ul>
             <button className="close-btn" onClick={closeModal}><img className="close-icon" src={close} alt="" /></button>
           </div>
@@ -228,10 +260,11 @@ login buttons
         <div className="second-2">
 
           <div className="school-sect">
-            <h1
+            <motion.div
+              variants={typingContainer} initial="hidden" animate="show"
               className="the-school">
-              ABOUT OUR SCHOOL
-            </h1>
+              {Array.from("ABOUT OUR SCHOOL").map((word, i) => (<motion.span key={i} variants={typingText} >{word}</motion.span>))
+              }            </motion.div>
           </div>
           {/* data-aos="zoom-out-down" data-aos-delay="50"
               data-aos-duration="2000"
