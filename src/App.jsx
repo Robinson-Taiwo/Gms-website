@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Parallax } from 'react-parallax'
-import { easeInOut, motion } from 'framer-motion';
+import { easeInOut, motion, useViewportScroll } from 'framer-motion';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -46,6 +46,10 @@ const App = () => {
 
   const [showModal, setShowModal] = useState(false);
 
+
+
+
+
   const openModal = () => {
     setShowModal(true);
   }
@@ -64,6 +68,9 @@ const App = () => {
     slidesToScroll: 1,
     autoplay: true
   };
+
+
+
 
   const typingContainer = {
     hidden: {
@@ -97,18 +104,25 @@ const App = () => {
     }
   }
 
+  const textVariants = {
+    initial: {
+      y: 40,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 3,
+        ease: "easeOut",
+
+      },
+    },
+  };
+
   // changing nav colour when scrolling
   const [colour, setColour] = useState(false)
 
-  // const changeColour = () => {
-  //   if (window.scrollY >= 10) {
-  //     setColour(true)
-  //   } else {
-  //     setColour(false)
-  //   }
-  // }
-
-  // window.addEventListener("scroll", changeColour)
 
   const kindClick = () => {
     setHeading("kindness")
@@ -122,8 +136,41 @@ const App = () => {
     setHeading("pride")
   }
 
+
+  const [email, setEmail] = useState("");
+
+  const handleInputChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const response = await fetch("https://api.woodpecker.co/v1/subscribers", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.REACT_APP_WOODPECKER_API_KEY}`,
+      },
+      body: JSON.stringify({
+        email: email,
+        list_id: process.env.REACT_APP_WOODPECKER_LIST_ID,
+        fields: {
+          school: "Your School Name",
+        },
+      }),
+    });
+
+    if (response.ok) {
+      console.log("User subscribed successfully!");
+      setEmail("");
+    } else {
+      console.error("Something went wrong while subscribing the user.");
+    }
+  };
+
   return (
-    <div className="home">
+    <div className="home ">
       <nav className="navbar">
         <img src={logo1} alt="" className="logo" />
         <div className="login">
@@ -141,7 +188,7 @@ const App = () => {
               <li className="li" ><a href="student-login.html">  Student </a></li>
               <li className="li"><a href="parent-login.html">  Parent</a></li>
             </ul>
-            <button className="close-btn" onClick={closeModal}><img className="close-icon" src={close} alt="" /></button>
+            <button className="close-btn" onClick={closeModal}><img git statusassName="close-icon" src={close} alt="" /></button>
           </div>
         </div>
       )}
@@ -261,33 +308,44 @@ login buttons
 
           <div className="school-sect">
             <motion.div
-              variants={typingContainer} initial="hidden" animate="show"
+              variants={typingContainer} initial="hidden" animate="show" transition={{ duration: 1 }}
               className="the-school">
               {Array.from("ABOUT OUR SCHOOL").map((word, i) => (<motion.span key={i} variants={typingText} >{word}</motion.span>))
               }            </motion.div>
           </div>
-          {/* data-aos="zoom-out-down" data-aos-delay="50"
-              data-aos-duration="2000"
-              data-aos-easing="ease-in-out" git status */}
-          {/* data-aos="zoom-out-down" data-aos-delay="50"
-              data-aos-duration="2000"
-              data-aos-easing="ease-in-out"  */}
+
 
           <div className="about-body">
             <div className="body-text">
-              <div
+              <motion.div
+                variants={textVariants}
+                initial="initial"
+                animate="animate"
+                transition={{ delay: 3 }}
 
                 className="body-p">
                 Great Marble Group of School is a leading institution of learning that values pride, strength, and kindness. The school prides itself on providing top-quality education to both primary and secondary school students. The institution's mission is to inspire and empower students to achieve their full potential through the provision of an environment that nurtures academic excellence, character development, and lifelong learning.
-              </div>
-              <div
+              </motion.div>
+              <motion.div
 
-                className="body-p">
+                variants={textVariants}
+                initial="initial"
+                animate="animate"
+                transition={{ delay: 7 }}
+
+
+                className="body-p ">
                 Located at 1, Olabanwo Street, off Ofin Road, Igbagbo in Baiyeku LCDA, the Great Marble Group of School is building a reputation for excellence in academics and character development. The school's dedicated and experienced faculty members work tirelessly to provide students with an education that is both rigorous and supportive. Great Marble Group of School is committed to creating a learning environment that is inclusive and values-driven, where students are encouraged to learn and grow.
 
 
-              </div>
-              <div
+              </motion.div>
+              <motion.div
+
+                variants={textVariants}
+                initial="initial"
+                animate="animate"
+                transition={{ delay: 10 }}
+
 
                 className="body-p">
                 Whether you are a primary school student or a secondary school student, Great Marble Group of School has everything you need to succeed. With a strong focus on academic excellence, character development, and community involvement, this institution is the perfect place to begin your journey towards a bright and successful future. So come and join us at Great Marble Group of School, where education and values go hand in hand!
@@ -295,7 +353,7 @@ login buttons
 
 
 
-              </div>
+              </motion.div>
             </div>
           </div>
 
@@ -306,9 +364,11 @@ login buttons
         <Parallax bgImage={school} strength={600}>
 
           <div className="third">
-            <h1 className="mission">
-              OUR MISSION
-            </h1>
+            <motion.h1
+              variants={typingContainer} initial="hidden" animate="show" transition={{ duration: 1 }}
+              className="mission">
+              {Array.from("OUR MISSION").map((word, i) => (<motion.span key={i} variants={typingText} >{word}</motion.span>))
+              }            </motion.h1>
             <div className="mission-text">
               <p
 
@@ -400,7 +460,7 @@ login buttons
                 <h1 className="news-head">
                   Suscribe to our  newsletter to get latest update
                 </h1>
-                <input placeholder="input your email here" type="text" className="news-input" />
+                <input value={email} onChange={onChangeEmail} placeholder="input your email here" type="text" className="news-input" />
                 <button className="submit">
                   submit
                 </button>

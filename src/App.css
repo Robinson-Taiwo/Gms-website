@@ -261,13 +261,12 @@ button.slick-arrow.slick-next {
 }
 
 .fourth-body {
-  @apply w-[50%] pt-[3rem]
+  @apply w-[50%] p-[3rem] flex  flex-col h-[content-fit]
 }
 
 .value-content {
   box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);
-
-  @apply bg-[#e4dcdc] h-[99%] w-[80%] ml-[4rem]
+  @apply bg-[#e4dcdc] h-[37.33rem] w-[90%] flex justify-center items-center flex-wrap
 }
 
 .mi-text2 {
@@ -307,9 +306,9 @@ button.slick-arrow.slick-next {
   @apply gap-[2rem] flex flex-col
 }
 
-.value-content {
+/* .value-content {
   @apply p-[2rem] flex justify-center items-center
-}
+} */
 
 .link.active {
   color: red;
@@ -819,13 +818,13 @@ a {
   }
 
   .fourth-body {
-    @apply w-[100vw] pt-[3rem]
+    @apply w-[100vw] p-[1rem]
   }
 
   .value-content {
     box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);
 
-    @apply bg-[#e4dcdc] h-[90%] w-[100%] ml-[0rem]
+    @apply bg-[#e4dcdc] h-[90%] w-[100%] ml-[0rem] p-[2rem]
   }
 
   .mi-text2 {

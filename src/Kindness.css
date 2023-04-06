@@ -1,9 +1,9 @@
 ol {
-    @apply flex flex-col gap-[1.5rem]
+    @apply flex flex-col gap-[1.5rem] flex-wrap
 }
 
 li {
-    @apply text-[1.2rem] text-[#2f4a5f] font-medium
+    @apply text-[1.2rem] text-[#2f4a5f] font-medium flex-wrap
 }
 
 @media (max-width: 767px) {
