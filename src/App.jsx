@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import logo1 from "../src/assets/logo1.svg"
 import close from "../src/assets/close.svg"
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 import pin from "../src/assets/pin.png"
 import Kindness from "./Kindness";
@@ -143,31 +144,7 @@ const App = () => {
     setEmail(event.target.value);
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
 
-    const response = await fetch("https://api.woodpecker.co/v1/subscribers", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.REACT_APP_WOODPECKER_API_KEY}`,
-      },
-      body: JSON.stringify({
-        email: email,
-        list_id: process.env.REACT_APP_WOODPECKER_LIST_ID,
-        fields: {
-          school: "Your School Name",
-        },
-      }),
-    });
-
-    if (response.ok) {
-      console.log("User subscribed successfully!");
-      setEmail("");
-    } else {
-      console.error("Something went wrong while subscribing the user.");
-    }
-  };
 
   return (
     <div className="home ">
@@ -460,7 +437,9 @@ login buttons
                 <h1 className="news-head">
                   Suscribe to our  newsletter to get latest update
                 </h1>
-                <input value={email} onChange={onChangeEmail} placeholder="input your email here" type="text" className="news-input" />
+                <input onChange={handleInputChange} value={email} placeholder="input your email here" type="text" className="news-input" />
+                {/* <MailchimpSubscribe url={import.meta.env.VITE_MAILCHIMP_URL} /> */}
+
                 <button className="submit">
                   submit
                 </button>
